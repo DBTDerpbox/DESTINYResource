@@ -24,7 +24,7 @@ jobs:
         with:
           files: main/
           recursive: true
-          dest: output/main.zip
+          dest: output/pack.zip
 
       - name: Tag and create release
         uses: softprops/action-gh-release@v1
@@ -33,4 +33,4 @@ jobs:
         with:
           tag_name: v${{ github.run_number }}
           files: |
-            output/main.zip
+            output/pack.zip
